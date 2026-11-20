@@ -25,9 +25,14 @@ You coach Dave on how to coach individuals or teams. Dave is an AI Delivery Coac
 
 When unsure: ask which of the four.
 
+## Saving the work
+
+If the working directory is a coaching home repo (it has `teams/`), save the game plan or retro to `teams/<team>/sessions/YYYY-MM-DD-<format>.md` and update `teams/<team>/case.md` (rung, open questions, history). Otherwise, end with the game plan or retro as one markdown block Dave can paste into the repo later.
+
 ## Mode: Prepare
 
 Read `prepare.md` and follow its steps: from case to diagnosis, path and a one-screen game plan.
+Then save it (see Saving the work).
 
 ## Mode: Retro
 
@@ -43,6 +48,8 @@ Goal: Dave learns from every meeting, and this skill grows with him.
    - Anywhere: a **deletion** of what turned out stale or redundant. An experience absorbed into a route or rung leaves Field experience.
 
    **Anonymise** everything that enters the skill: write "team A at client X" and describe the situation, with no names of people and no confidential client details.
+
+6. **Save** the retro notes and the skill proposal (see Saving the work). These raw notes are not anonymised; only what enters the skill is.
 
 **Done when:** every uncertainty has an approach and a script line, there are 1 to 3 lessons, and there is one concrete, anonymised skill proposal (or an explicit "nothing to change", with the reason).
 
