@@ -1,6 +1,6 @@
 # Prepare
 
-The goal: a **game plan** for an upcoming meeting with a team or an individual, which Dave reads in two minutes beforehand.
+The goal: a **game plan** for an upcoming meeting with a team or an individual, which Dave reads in two minutes beforehand. Dave directs: he picks the direction from three options before the plan is written.
 
 Dave usually starts from a **case**: a team with its architecture, stack, processes and AI knowledge, and the question how to move it forward on AI enablement.
 
@@ -9,14 +9,21 @@ Dave usually starts from a **case**: a team with its architecture, stack, proces
    - *architecture and stack*: language, architecture, tests, CI, which Copilot features are enabled
    - *processes*: how work flows from idea to production (refinement, review, release)
    - *case*: the goal, what they ask of Dave
-   - *format*: presentation, lunch & learn, one-on-one call or workshop; duration, audience size, first meeting or follow-up. Without a format: propose the one that fits the rung.
-2. **Diagnose** on the ladder (in `SKILL.md`): pick the rung and name the signals and assumptions.
-3. **Lay out the path**: 2 to 4 steps from the current rung toward the next, each tied to a route from `routes.md`. The path is what the team walks after the meeting; the meeting puts them on its first step.
-4. **Fill in the game plan** below, block by block, with the source between ⟨⟩. Build the Plan block from the matching format skeleton. Take Copilot tips from `copilot.md`.
+   - *format*: presentation, lunch & learn, one-on-one call or workshop; duration, audience size, first meeting or follow-up. Without a format: propose the one that fits the level.
+2. **Diagnose** the level (in `SKILL.md`, The levels): pick it and name the signals and assumptions. Every option in step 3 starts from this level.
+3. **Recommend three options, then stop.** Three different next steps for a team on *this* level, each built on a different route from `routes.md`. Don't offer three versions of the same plan, and don't take options from another level. Use this format for each option:
+   ```
+   **[A/B/C]. [title]** · route: [...]
+   - Why now: [signal from the case]
+   - Trade-off: [what it costs or risks]
+   ```
+   Mark one as recommended, with one line why. Close with: "Which one, or do you have another direction?" Then wait: Dave picks one, combines them or brings his own. Write and save nothing before he chooses. Skip this step when Dave already names the topic or route.
+4. **Lay out the path**: 2 to 4 steps from the current level toward the next, each tied to a route from `routes.md`. Step 1 is the option Dave chose. The path is what the team walks after the meeting; the meeting puts them on its first step.
+5. **Fill in the game plan** below, block by block, with the source between ⟨⟩. Build the Plan block from the matching format skeleton. Take Copilot tips from `copilot.md`.
 
 ```
 ## Game plan: [team/case], [date], [format]
-**Rung:** [n – name] · signals: [...] · assumptions: [...]
+**Level:** [n – name] · signals: [...] · assumptions: [...]
 **Path:**  ⟨routes.md⟩
 1. [step] · route: [...]  ← goal of this meeting
 2. [step] · route: [...]
@@ -32,7 +39,7 @@ Dave usually starts from a **case**: a team with its architecture, stack, proces
 ### Watch for your retro  ⟨2 things to observe during the meeting⟩
 ```
 
-**Done when:** every block is filled in, every path step names its route, every Plan part has a script line specific to *this* case, and Dave reads the whole thing in two minutes.
+**Done when:** the plan builds on the option Dave chose, every block is filled in, every path step names its route, every Plan part has a script line specific to *this* case, and Dave reads the whole thing in two minutes.
 
 ## Format skeletons
 
@@ -40,7 +47,7 @@ Dave usually starts from a **case**: a team with its architecture, stack, proces
 
 One idea and one demo; the rest of the path goes to a follow-up.
 
-1. **Hook.** Their pain in their words: the signals of their rung.
+1. **Hook.** Their pain in their words: the signals of their level.
    Script line: "Who recognises this: [signal]?"
 2. **Matt's idea.** The one principle behind path step 1, with one picture or metaphor.
 3. **Demo on their stack.** Show path step 1 on code like theirs, in the Copilot features they have.
@@ -52,7 +59,7 @@ One idea and one demo; the rest of the path goes to a follow-up.
 
 The main route as a conversation; works for every case and every stack.
 
-1. **Set the scene.** Rung, who's at the table, today's goal.
+1. **Set the scene.** Level, who's at the table, today's goal.
    Script line: "Tell me how you'd tackle this today, without AI."
 2. **Grill the case, not the code.** Goal, user, when is it done, which terms does the team use? Pin the terms down. Result: a short spec, written together or with the agent.
    Script line: "Let's get this sharp together before we build anything."

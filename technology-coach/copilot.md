@@ -14,5 +14,5 @@ What's enabled depends on version, plan and organisation policy: Dave checks it 
 | Repeated prompts | Prompt files in `.github/prompts/*.prompt.md`, as a slash command. |
 | Grilling and planning | Plan agent (`/plan`) asks clarifying questions first and makes a plan; or a grill skill. |
 | Subagents | Agent and Plan mode start subagents themselves; custom roles via `.github/agents/*.agent.md`. |
-| Building tickets AFK | Assign an issue to the Copilot cloud agent (formerly "coding agent"), which opens a PR in the background. From rung 3. |
+| Building tickets AFK | Assign an issue to the Copilot cloud agent (formerly "coding agent"), which opens a PR in the background. From level 3. |
 | Review | Copilot code review on the PR (also uses instructions and skills), plus human review. |
