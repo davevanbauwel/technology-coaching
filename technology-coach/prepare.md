@@ -6,7 +6,7 @@ Dave usually starts from a **case**: a team with its architecture, stack, proces
 
 1. **Gather** what is missing:
    - *team*: who, roles, AI experience per person
-   - *architecture and stack*: language, architecture, tests, CI, which Copilot features are enabled
+   - *architecture and stack*: language, architecture, tests, CI
    - *processes*: how work flows from idea to production (refinement, review, release)
    - *case*: the goal, what they ask of Dave
    - *format*: presentation, lunch & learn, one-on-one call or workshop; duration, audience size, first meeting or follow-up. Without a format: propose the one that fits the level.

@@ -2,8 +2,6 @@
 
 **As of:** checked on 19 November 2026 (sources: https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/create-skills and https://docs.github.com/en/copilot/concepts/prompting-and-context/context-management). When a feature no longer seems right, say so and suggest checking it there.
 
-What's enabled depends on version, plan and organisation policy: Dave checks it with the team.
-
 | In Matt's world (Claude Code) | In GitHub Copilot |
 |---|---|
 | Watching context (smart/dumb zone) | Context indicator in the chat box of VS Code and Visual Studio; `/context` in Copilot CLI. New session per task. |
