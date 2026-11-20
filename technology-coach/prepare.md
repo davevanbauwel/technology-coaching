@@ -1,6 +1,6 @@
 # Prepare
 
-The goal: a **game plan** for an upcoming meeting with a team, which Dave reads in two minutes beforehand.
+The goal: a **game plan** for an upcoming meeting with a team or an individual, which Dave reads in two minutes beforehand.
 
 Dave usually starts from a **case**: a team with its architecture, stack, processes and AI knowledge, and the question how to move it forward on AI enablement.
 
