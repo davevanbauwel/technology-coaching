@@ -43,9 +43,11 @@ Goal: Dave learns from every meeting, and this skill grows with him.
 3. **Every uncertainty**: give the approach for next time plus a script line. For doubts about a specific stack or tool: say so and show how Dave finds out.
 4. **Distil 1 to 3 lessons.**
 5. **Propose a skill change**, in the file where it belongs:
-   - `SKILL.md`: an experience line under Field experience (`- [month year] · [situation] · worked: [...] · next time: [...]`) or a signal on a rung. Deliver it as `edits` via `propose_skills`.
-   - `routes.md`, `prepare.md`, `copilot.md`: a route in the route format, a fallback line, a stack question or a Copilot tip. Deliver it as an exact text block with file name and location, so Dave updates the file himself.
+   - `SKILL.md`: an experience line under Field experience (`- [month year] · [situation] · worked: [...] · next time: [...]`) or a signal on a rung.
+   - `routes.md`, `prepare.md`, `copilot.md`: a route in the route format, a fallback line, a stack question or a Copilot tip.
    - Anywhere: a **deletion** of what turned out stale or redundant. An experience absorbed into a route or rung leaves Field experience.
+
+   Deliver every change as an exact text block with file name and location. Never edit the installed skill directly (no `propose_skills`): the source is the GitHub repo `davevanbauwel/technology-coaching`, and changes go there first, then get rebuilt and re-uploaded.
 
    **Anonymise** everything that enters the skill: write "team A at client X" and describe the situation, with no names of people and no confidential client details.
 
