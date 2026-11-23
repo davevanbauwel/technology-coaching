@@ -1,119 +1,116 @@
 # Routes
 
-One route per team situation. The concept comes first; Matt's skill names follow in brackets as reference.
+One route per team situation, grouped by the layer of the path. The concept comes first; Matt's skills follow in brackets as reference. Concepts, decision rules and Matt's takes live in `course.md`.
 
-**As of:** checked against Matt's ask-matt-router (github.com/mattpocock/skills) on 20 November 2026. When a skill name no longer seems right, say so and suggest checking it.
-
-**Main route:** grill → (prototype) → spec → tracer-bullet tickets → build with TDD → review → retro. Grill, spec and tickets in one uninterrupted context; after that, each ticket in a fresh session.
+**As of:** skill names checked against github.com/mattpocock/skills (router `ask-matt`) on 23 November 2026. When a skill name no longer seems right, say so and suggest checking it.
 
 **Route format:**
 ```
-**[Situation]** · level [n]
-- Idea: [Matt's principle]. (Matt: [skills])
+**[Situation]** · level [n] · step [k]
+- Idea: [Matt's principle; name one of the three lines where it fits]. (Matt: [skills])
 - Concrete: [what the team does this week]
 - Script line: "[...]"
 ```
 
-### Building
-
-**Refinement produces vague stories; the agent builds the wrong thing** · level 2
-- Idea: grill before you build; the spec is the agreed destination; slice into tracer bullets. (Matt: grill-with-docs → to-spec → to-tickets → implement)
-- Concrete: take one story, let the agent question the team until "done" is sharp, write a one-page spec in the repo, slice into 2 to 4 slices as issues, new chat per slice.
-- Script line: "Before we prompt, we grill this story until we know when it's done."
-
-**The agent derails halfway through a big task** · level 1–2
-- Idea: the smart zone is limited; plan in one context, execute per self-contained ticket. (Matt: to-spec → to-tickets → implement)
-- Concrete: stop the task, turn it into tickets that each stand on their own, start a new session per ticket with only that ticket as context.
-- Script line: "Let's give the agent one ticket at a time, on a clean table."
-
-**A design question won't get settled on paper** · level 2
-- Idea: answer one question with throwaway code; the decision carries forward, the code is source. (Matt: prototype, handoff)
-- Concrete: separate branch or folder, the agent builds a minimal version (UI, data model), decide, record the decision in the issue.
-- Script line: "We're building this in an hour to choose, not to keep."
-
-**Stubborn or intermittent bug** · level 2–3
-- Idea: first a tight feedback loop that goes red on the bug; fix with a regression test; then: what would have prevented this? (Matt: diagnosing-bugs → retro)
-- Concrete: one command that goes red on *this* bug, then fix, keep the test, retro: which check or seam was missing?
-- Script line: "Can we get the bug reliably red first?"
-
-### Backlog and refinement
-
-**Incoming bugs and requests pile up** · level 2–3
-- Idea: triage makes raw input agent-ready; tickets from your own spec already are. (Matt: triage → implement)
-- Concrete: fixed labels (needs-info, ready-for-agent, needs-human), clarify each issue until it can be executed on its own.
-- Script line: "Which issue could an agent pick up alone tomorrow, and what's missing from the rest?"
-
-### Ceremonies
-
-**The retro is only about people; the agent keeps making the same mistakes** · level 2–3
-- Idea: the retro improves the agent's environment. Mechanical mistakes become checks, judgement mistakes become standards or instructions. (Matt: retro)
-- Concrete: add to the team retro the question "What should the agent know better next time?" One action per retro: AGENTS.md, a lint rule or a test.
-- Script line: "Every mistake that happens twice becomes a rule or a check."
-
-**Review is the bottleneck** · level 3
-- Idea: brakes first. Machines catch the mechanical; humans review against spec and standards. (Matt: code-review, pr, retro)
-- Concrete: one slice per PR, types/tests/lint required in CI, review in two questions (does it follow the standards? does it do what the spec says?), PR description with proof that it works.
-- Script line: "What do we catch by hand today that a check could catch?"
-
-### Team knowledge
-
-**New colleagues, or the agent confuses terms** · level 1–3
-- Idea: one domain language for human and agent: glossary, ADRs, a short AGENTS.md that points onward. (Matt: domain-modeling, grill-with-docs, writing-for-agents)
-- Concrete: glossary with the 10 terms that go wrong most, one recent hard decision as an ADR, a pointer from AGENTS.md.
-- Script line: "What a new colleague needs to know, the agent needs to know too."
+### Fundamentals
 
 **Experienced colleagues without AI experience (e.g. close to retirement)** · level 0
-- Idea: their domain knowledge is exactly what the method needs; AI amplifies their expertise. (Matt: domain-modeling, code-review)
+- Idea: their domain knowledge is exactly what the method needs; humans do the strategic work. (Matt: domain-modeling, code-review)
 - Concrete: start with their own code and a small, visible win; make them the source of the domain language and reviewer of what the agent produces.
 - Script line: "You know what's right. The agent types, you decide."
 
-**Knowledge lives in one head (e.g. a colleague who's leaving)** · level 0–3
+**Long sessions; the agent gets dumber along the way, or derails halfway** · level 1–2
+- Idea: the smart zone is limited; decide at each phase boundary; mid-task, hand off rather than compact. (Matt: handoff)
+- Concrete: one task per session; after planning, building and testing, ask "do I still need this context?". A task that derails: stop, write a handoff note, and size it with the planning tree in `course.md` (ch. 2).
+- Script line: "We're done planning. Do we take this context along, or start fresh?"
+
+### Shared language · step 1
+
+**Refinement produces vague stories; the agent builds the wrong thing** · level 2 · step 1
+- Idea: grill before you build; the spec is the agreed destination. But one-shot tiny diffs. (Matt: grill-with-docs → to-spec → to-tickets → implement)
+- Concrete: take one story; tiny diff → one-shot and align on the diff. Otherwise the agent grills the team until "done" is sharp, terms go into GLOSSARY.md, then a spec in the issue tracker and 2 to 4 tracer-bullet tickets, a fresh session per ticket.
+- Script line: "Before we prompt, we grill this story until we know when it's done."
+
+**The agent (or a new colleague) confuses terms; names drift between UI, code and people** · level 1–3 · step 1
+- Idea: one domain language for human and agent; the agent proposes, the team chooses and reviews. (Matt: grill-with-docs, domain-modeling)
+- Concrete: a GLOSSARY.md with the 10 terms that go wrong most (with *Avoid:* words), one recent hard decision as an ADR, a pointer from AGENTS.md. Tie between two words? Count them in the code.
+- Script line: "What a new colleague needs to know, the agent needs to know too, and we decide the words."
+
+**Knowledge lives in one head (e.g. a colleague who's leaving)** · level 0–3 · step 1
 - Idea: when the blocker is in someone's head, ask targeted questions on the gap; the answers feed the domain language. (Matt: to-questionnaire, domain-modeling)
 - Concrete: the agent builds a questionnaire aimed at what's missing; fold the answers into glossary and ADRs; that colleague reviews what the agent builds.
 - Script line: "Your knowledge is exactly what the agent lacks. Let's capture it."
 
-**Legacy nobody dares touch** · level 3
-- Idea: explore with the agent, look for chances to make modules deeper, lay seams so you can test. (Matt: improve-codebase-architecture, codebase-design)
-- Concrete: the agent maps one module, pick one deepening opportunity, lay a seam with a test, carry the improvement into the main route.
-- Script line: "We start with one place where we can test."
+### Foundations · steps 2–6
 
-### Agentic workflow
-
-**Long sessions; the agent gets dumber along the way** · level 1–2
-- Idea: decide at a phase boundary: continue, clear, handoff, subagent or compact (the default). (Matt: phase boundaries, handoff)
-- Concrete: after planning, after building, after testing: do I still need this context? Side track → subagent. Other folder or colleague → handoff note.
-- Script line: "We're done planning. Do we take this context along, or start fresh?"
-
-**What may the agent do alone (AFK)?** · level 3–4
-- Idea: AFK only for self-contained tickets with good brakes; the human decides on spec, design and what's missing; steps only a human can do become a script. (Matt: implement-spec, wizard)
-- Concrete: list which tickets have tests, CI and a clear spec; only those go to the cloud agent. Write manual steps (secrets, dashboards) out as a script.
-- Script line: "Which brakes need to be in place before we let the agent work alone?"
-
-**A lot of reading is needed before a decision** · all levels
-- Idea: delegate the reading to a background agent with citations; the result feeds the grill. (Matt: research)
-- Concrete: one research question, a markdown file with sources in the repo, discuss it in the next grill.
-- Script line: "Let the agent figure this out while we keep working."
-
-### Big, unclear initiatives
-
-**Migration, greenfield or a feature too big for one session** · level 2–4
-- Idea: wayfinder: a map of decisions, one resolved per session. That yields decisions; spec and tickets follow afterwards. (Matt: wayfinder → to-spec → to-tickets)
-- Concrete: list the open decisions as issues with dependencies, decide one per session, bundle everything into a spec afterwards.
+**Migration, greenfield or a feature too big for one session** · level 2–4 · step 2
+- Idea: a map of decisions, one per fresh session; spec and tickets follow afterwards. Don't start there: switch when a grill grows past the dumb zone. (Matt: wayfinder → to-spec → to-tickets → implement-spec)
+- Concrete: one map issue with decision tickets typed as grilling, research, prototype or task; resolve one per session; bundle into a spec at the end.
 - Script line: "We don't need to build today. We need to know which decision comes first."
 
-## Glossary
+**A design or vendor question won't get settled on paper** · level 2–3 · step 2
+- Idea: decide at the right fidelity; prototyping is where to spend tokens. (Matt: prototype)
+- Concrete: a prototype ticket: the agent builds 2 or 3 variants on a throwaway branch, the team picks, the decision goes into the ticket or an ADR; the code stays off main.
+- Script line: "We build this in an hour to choose, not to keep."
 
-Only Matt's own meanings; use common terms (context window, subagent, skill, deep module) as they are generally known.
+**A lot of reading is needed before a decision** · all levels · step 2
+- Idea: a research ticket: a subagent reads primary sources and writes a cited file that feeds the grill. (Matt: research)
+- Concrete: one research question, a markdown file with sources in the repo, discussed in the next grill.
+- Script line: "Let the agent read this while we keep working."
 
-- **Smart zone / dumb zone**: sharp reasoning with a lean context, sagging as it fills up.
-- **Compaction vs handoff**: compaction summarises within the session; a handoff note starts a new one. Mid-task: handoff.
-- **Phase boundary**: the moment after planning, building or testing to decide about context.
-- **Grilling**: questioning a vague idea until the requirements are sharp.
-- **Spec**: the agreed destination: what we build, when it's done.
-- **Tracer bullet**: thin vertical slice that works end-to-end through all layers.
-- **Wayfinder**: map of decisions for work too big for one session.
-- **Domain language**: shared glossary and ADRs, for human and agent.
-- **Feedback loop**: anything that quickly tells the agent something is wrong (types, tests, lint). Good = tight and can go red.
-- **Brakes / accelerators**: brakes raise quality, accelerators raise pace. Brakes first.
-- **AFK / HITL**: agent works alone, or with a human in the loop.
-- **Retro**: after work with the agent: what should the agent's environment do better?
+**Review is the bottleneck** · level 3 · step 3
+- Idea: brakes before speed: three brakes, cheapest first. Machines catch the mechanical, a fresh review agent fixes against standards and spec, humans review by risk. (Matt: code-review, pr)
+- Concrete: one slice per PR; types, tests and lint required in CI; a review agent in a fresh session with the spec, which fixes rather than comments; a PR body with summary, before/after evidence and merge danger; human depth set by door and blast radius.
+- Script line: "Is this a one-way or a two-way door, and what breaks if it's wrong?"
+
+**The same review comments keep coming back; the retro is only about people** · level 2–3 · step 4
+- Idea: never the same comment twice. A comment becomes a check if the code alone can show the problem, otherwise a coding standard for the review agent; stale or process rules get deleted. (Matt: retro)
+- Concrete: list last month's repeated comments; write each as a rule; sort with the rule-to-check tree (`course.md`, ch. 5). Add "what should the agent's environment do better?" to the team retro: one action per retro.
+- Script line: "If we write this comment a second time, it becomes a check."
+
+**The team puts all its rules in AGENTS.md (or copilot-instructions), and it keeps growing** · level 2–3 · step 4
+- Idea: hide the standards from the implementer; the implementer makes it work, a fresh reviewer makes it good. AGENTS.md stays short. (Matt: code-review, writing-for-agents)
+- Concrete: move coding standards to a file only the review agent reads; turn what can be a check into a check; prune the rest.
+- Script line: "The builder doesn't need the rulebook. The reviewer does."
+
+**Legacy nobody dares touch; copied logic; tests that only repeat the code** · level 3 · step 5
+- Idea: agents are tactical tornadoes; deep modules make bad tests impossible to write; don't ban agent-written tests, fix the codebase. (Matt: improve-codebase-architecture, codebase-design)
+- Concrete: point the scan at the file the team already suspects; pick one candidate to delete or deepen; lay a seam with a test; add a narrow boundary rule plus a coding standard so it stays that way.
+- Script line: "We start with one place where we can test."
+
+**Checks are slow, skipped or noisy; the agent breaks the build** · level 2–3 · step 6
+- Idea: determinism every time; pre-commit under ~3 s on staged files; CI is the only hard stop; error messages carry the fix. (Matt: retro)
+- Concrete: measure the hook; move tests out of it; add format, lint, typecheck and boundaries in parallel; make every error say what to do next; make CI required.
+- Script line: "What do we catch by hand today that a check could catch in three seconds?"
+
+**Stubborn or intermittent bug; agent fixes bugs badly** · level 2–3 · step 6
+- Idea: first a loop that goes red on the bug; give the agent eyes (logs, database, browser); keep the regression test. (Matt: diagnosing-bugs → retro)
+- Concrete: one command that goes red on *this* bug; give the agent read access to the data it needs; fix, keep the test; retro: which check or seam was missing?
+- Script line: "Can we get the bug reliably red first, and what can't the agent see?"
+
+**Tests pass, but bugs still slip through** · level 3 · step 6
+- Idea: test the tests: a surviving mutant is a missing test. Information, not a gate. (course: mutation-testing)
+- Concrete: run mutation testing on the changed lines of one PR; turn each surviving mutant into a test.
+- Script line: "Let's check whether our tests would notice if the code were wrong."
+
+### Factory · steps 7–8
+
+**Pressure to "go faster with agents" before the brakes are there** · any level
+- Idea: brakes before speed; without check and review layers, a factory is a slop cannon. (Matt: retro, code-review)
+- Concrete: list which of steps 3, 4 and 6 hold; the missing one is the next step, not more agents.
+- Script line: "Which brakes need to be in place before we let the agent work alone?"
+
+**What may the agent do alone (AFK)?** · level 3–4 · step 7
+- Idea: start with review, not implementation; agent confidence never decides a merge; auto-merge only two-way, small blast radius, no data migration. Steps only a human can do become a script. (Matt: code-review, wizard)
+- Concrete: one label-triggered step (review first) in a sandbox; `needs-a-human` for decisions; manual steps (secrets, dashboards) as a wizard script.
+- Script line: "We let the agent alone on the step where a mistake is cheapest to catch."
+
+**Incoming bugs and requests pile up** · level 3–4 · step 7
+- Idea: intake and triage make raw input agent-ready; an explore agent reproduces and groups. (Matt: triage)
+- Concrete: fixed labels (needs-info, ready-for-agent, needs-a-human); clarify each issue until it can be executed on its own; later, an explore step on a label.
+- Script line: "Which issue could an agent pick up alone tomorrow, and what's missing from the rest?"
+
+**The team wants agents on a schedule or on events (nightly jobs, monitors)** · level 4 · step 8
+- Idea: every loop needs a stop; determinism first; pull signals, don't push them. (course: software-factory)
+- Concrete: design one loop on one page (Trigger · Task · Brake · Output · Human); script what can be scripted; start with a ratchet or a daily scan with a hard limit on open PRs; add observability later.
+- Script line: "If we can't name the brake, we don't build the loop."
