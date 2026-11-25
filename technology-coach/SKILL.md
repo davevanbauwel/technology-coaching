@@ -118,7 +118,18 @@ Goal: Dave learns from every meeting, and this skill grows with him. Matt's seco
 
 ## Saving the work
 
-If the working directory is a coaching home repo (it has `teams/`), save the game plan or retro to `teams/<team>/sessions/YYYY-MM-DD-<format>.md` and update `teams/<team>/case.md` (level, ladder step, open questions, history). Otherwise end with one markdown block Dave can paste into the repo later.
+**In a coaching home repo** (the working directory or one of its parents has `clients/`):
+- Cases live at `clients/<client>/[<unit>/]<teams|individuals|meetings>/<case>/` with a `case.md` and `sessions/YYYY-MM-DD-<format>.md`. A unit (department, programme) has its own `<unit>.md`.
+- Before preparing, read `client.md`, `<unit>.md`, `case.md` and the latest retro; for an individual also their team's case. Client rules there (words to avoid, language, budget, tool approval) win over generic advice.
+- Save the game plan or retro to the session file and update `case.md` (level, ladder step, agreements, open questions, history). Facts go as high as they hold: client-wide to `client.md`, unit-wide to `<unit>.md`. A new case starts from `clients/_template/<type>.md`.
+
+**Anywhere else** (e.g. a client laptop): save nothing. End with one markdown block Dave can paste into the home repo, starting with this header line:
+
+```
+Client: [client] · Unit: [unit or –] · Case type: [team | individual | meeting] · Case: [folder-name] · Team: [team or –] · Session: YYYY-MM-DD-[format]
+```
+
+Then the game plan (or retro) verbatim, then **Assumptions to confirm**: every fact you assumed because there was no `client.md` (budget, contacts, tooling, language).
 
 ## Sources
 

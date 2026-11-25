@@ -29,3 +29,12 @@ The concepts are the same; only the mechanics differ. Matt's skills are markdown
 | Agent works alone in a sandbox | Assign an issue to the Copilot cloud agent: it works in its own ephemeral GitHub Actions environment and opens a PR. From level 4, after steps 3, 4 and 6 hold. |
 | Label-triggered steps | GitHub Actions on `issues: labeled`, filtered on one label per job. How the workflow hands the issue to Copilot depends on plan and API support: check the docs. |
 | Scheduled loops (orchestrator slot) | GitHub Actions `schedule` and event triggers; concurrency groups and timeouts as brakes. |
+
+## Cost and usage (AI credits)
+
+*Checked on 25 November 2026 (sources: https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/set-session-limit, https://docs.github.com/en/copilot/tutorials/optimize-ai-usage, https://docs.github.com/en/copilot/concepts/models/auto-model-selection). Usage-based billing started 1 June 2026; one AI credit is $0.01. Business and Enterprise get a pooled allowance per licence: check the client's own number, don't quote one.*
+
+- **See what it cost:** `/chronicle cost tips` in Copilot CLI looks at recent sessions and suggests savings; `/chronicle standup` summarises recent work.
+- **A brake per session:** `--max-ai-credits N` (scripted, with `copilot -p`) or `/limits set max-ai-credits N` (interactive). A soft limit in public preview; works best above 30 credits, since most model calls cost over 20. Offer it as a personal brake, not as a client policy.
+- **Auto model selection:** billed at the rate of the model it picks, with a 10% discount on paid plans (Chat, CLI, cloud agent). Since September 2026 it has cost/quality tiers.
+- **Usage conversation, Matt-style:** cost follows context. One task per session and a fresh session per decision cut cost more than any model switch.
