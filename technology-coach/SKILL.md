@@ -118,18 +118,16 @@ Goal: Dave learns from every meeting, and this skill grows with him. Matt's seco
 
 ## Saving the work
 
-**In a coaching home repo** (the working directory or one of its parents has `clients/`):
-- Cases live at `clients/<client>/[<unit>/]<teams|individuals|meetings>/<case>/` with a `case.md` and `sessions/YYYY-MM-DD-<format>.md`. A unit (department, programme) has its own `<unit>.md`.
-- Before preparing, read `client.md`, `<unit>.md`, `case.md` and the latest retro; for an individual also their team's case. Client rules there (words to avoid, language, budget, tool approval) win over generic advice.
-- Save the game plan or retro to the session file and update `case.md` (level, ladder step, agreements, open questions, history). Facts go as high as they hold: client-wide to `client.md`, unit-wide to `<unit>.md`. A new case starts from `clients/_template/<type>.md`.
+**In a coaching home repo** (the working directory or a parent has `clients/`): its `AGENTS.md` says what to read before preparing and where to save. Follow it.
 
-**Anywhere else** (e.g. a client laptop): save nothing. End with one markdown block Dave can paste into the home repo, starting with this header line:
+**Anywhere else** (e.g. a client laptop): save nothing. End with one markdown block Dave can paste into the home repo:
 
-```
-Client: [client] · Unit: [unit or –] · Case type: [team | individual | meeting] · Case: [folder-name] · Team: [team or –] · Session: YYYY-MM-DD-[format]
-```
-
-Then the game plan (or retro) verbatim, then **Assumptions to confirm**: every fact you assumed because there was no `client.md` (budget, contacts, tooling, language).
+1. This header line:
+   ```
+   Client: [client] · Unit: [unit or –] · Case type: [team | individual | meeting] · Case: [folder-name] · Team: [team or –] · Session: YYYY-MM-DD-[format]
+   ```
+2. The game plan (or retro), verbatim.
+3. **Assumptions to confirm**: every client fact you assumed (budget, contacts, tooling, language), since there is no client file here.
 
 ## Sources
 
