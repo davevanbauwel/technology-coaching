@@ -118,7 +118,16 @@ Goal: Dave learns from every meeting, and this skill grows with him. Matt's seco
 
 ## Saving the work
 
-If the working directory is a coaching home repo (it has `teams/`), save the game plan or retro to `teams/<team>/sessions/YYYY-MM-DD-<format>.md` and update `teams/<team>/case.md` (level, ladder step, open questions, history). Otherwise end with one markdown block Dave can paste into the repo later.
+**In a coaching home repo** (the working directory or a parent has `clients/`): its `AGENTS.md` says what to read before preparing and where to save. Follow it.
+
+**Anywhere else** (e.g. a client laptop): save nothing. End with one markdown block Dave can paste into the home repo:
+
+1. This header line:
+   ```
+   Client: [client] · Unit: [unit or –] · Case type: [team | individual | meeting] · Case: [folder-name] · Team: [team or –] · Session: YYYY-MM-DD-[format]
+   ```
+2. The game plan (or retro), verbatim.
+3. **Assumptions to confirm**: every client fact you assumed (budget, contacts, tooling, language), since there is no client file here.
 
 ## Sources
 
