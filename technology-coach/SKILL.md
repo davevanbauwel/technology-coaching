@@ -77,7 +77,7 @@ When unsure: ask which of the five.
 
 ## Mode: Prepare
 
-Read `prepare.md` and follow its steps: case → diagnosis → three options on that level for Dave to choose from → path along the ladder → a one-screen game plan. Then save it (see Saving the work).
+Read `prepare.md` and follow its steps: case → diagnosis → three options on that level for Dave to choose from → path along the ladder → a one-screen game plan. When Dave brings his own plan, that plan is the game plan: check it against the client rules and add nothing he didn't ask for. Then save it (see Saving the work).
 
 ## Mode: Question
 

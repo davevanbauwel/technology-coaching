@@ -2,6 +2,10 @@
 
 The goal: a **game plan** for an upcoming meeting with a team or an individual, which Dave reads in two minutes beforehand. Dave directs: he picks the direction from three options before the plan is written.
 
+**Dave's own plan comes first.** When Dave brings a plan he made himself (a drawing, notes, a draft agenda), that plan *is* the game plan. Skip steps 2–5: put it in the session file faithfully, in its own structure, in English, and check it against the client rules (`home-repo.md`, Prepare step 3). Name each conflict, and add nothing else: no diagnosis, ladder steps, script lines, tips or fallback lines unless Dave asks for them. Before you build options, ask whether Dave already has a plan.
+
+**Reading a drawing:** a tldraw share link renders in the browser and can't be fetched. Ask for the `.tldr` file (Menu → Download / Save a copy): it is JSON, and every shape's text sits under `records` → `props.text` or `props.richText`. On WSL, Windows paths like `C:\Users\...` map to `/mnt/c/Users/...`.
+
 Dave usually starts from a **case**: a team with its architecture, stack, processes and AI knowledge, and the question how to move it forward.
 
 1. **Gather** what is missing:
@@ -40,7 +44,7 @@ Dave usually starts from a **case**: a team with its architecture, stack, proces
 ### Watch for your retro  ⟨2 things to observe, at least one a target behaviour to look for in their work (the retro's Seen line)⟩
 ```
 
-**Done when:** the plan builds on the option Dave chose, every block is filled in, every ladder step names its approach, every Plan part has a script line specific to *this* case, and Dave reads the whole thing in two minutes.
+**Done when** (for Dave's own plan: it is in the session file unchanged in substance, with every client-rule conflict named): the plan builds on the option Dave chose, every block is filled in, every ladder step names its approach, every Plan part has a script line specific to *this* case, and Dave reads the whole thing in two minutes.
 
 ## Format skeletons
 
