@@ -43,12 +43,12 @@ The client's description of its units and of how Dave coaches in each: who sits 
 _Avoid_: org chart, unit file
 
 **Route**:
-The agreed sequence of sessions for the teams in a unit.
+The agreed sequence of sessions for the teams in a unit, such as one-on-ones followed by a numbered series (S1, S2, …).
 _Avoid_: programme, curriculum
 
 **Route step**:
-Where a case stands on its unit's route.
-_Avoid_: journey stage
+One session on a unit's route (e.g. S1), and where a case stands on it; always written in full.
+_Avoid_: step (bare), journey stage
 
 **Session**:
 One meeting within a case, recorded as a game plan before and a retro after.
@@ -57,6 +57,16 @@ _Avoid_: appointment
 **Paste block**:
 The skill's output on a machine without a home repo (e.g. a client laptop): a game plan or retro plus the case facts learned and assumptions to confirm, pasted into the home repo later.
 _Avoid_: export, handover
+
+## Coaching method
+
+**Ladder step**:
+One of the eight steps the course builds, in order, from shared language to the factory; always written in full.
+_Avoid_: step (bare), route step
+
+**Approach**:
+A known way to coach a recurring team situation: the principle behind it, what the team does this week, and a script line.
+_Avoid_: route, play, recipe, pattern
 
 ## Progress
 

@@ -20,7 +20,7 @@ clients/<client>/
     sessions/YYYY-MM-DD-<format>.md   game plan on top, retro below
 ```
 
-Templates for every file are in this skill's `templates/`. Headings stay in English (Report finds sections by them); the text is in the client's language, from the **Language** line in `client.md`.
+Templates for every file are in this skill's `templates/`. Every file is in English, headings and text alike. The **Language** line in `client.md` only sets the language of what the teams see or hear (script lines, slides).
 
 ## Filing rules
 
@@ -67,7 +67,7 @@ A paste block comes from a machine without a home repo (shape: `SKILL.md`, Savin
 
 ## Report
 
-Writes `clients/<client>/report.md` from `templates/report.md`, over the previous one. Period: the previous calendar month, unless Dave names one. For Dave first; everything, including the template's fixed text, in the client's language.
+Writes `clients/<client>/report.md` from `templates/report.md`, over the previous one. Period: the previous calendar month, unless Dave names one. For Dave first; in English.
 
 1. **Read** `client.md`, `structure.md`, every `case.md`, every session file dated in the period, the Evidence blocks of earlier sessions (for blockers still open), and `success-cases/`.
 2. **Fill the template**, section by section:

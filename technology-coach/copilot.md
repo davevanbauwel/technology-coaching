@@ -14,18 +14,18 @@ The concepts are the same; only the mechanics differ. Matt's skills are markdown
 | Skills | `.github/skills/<name>/SKILL.md` (also `.claude/skills`, `.agents/skills`); personal in `~/.copilot/skills`. Works in VS Code agent mode, Copilot CLI, the cloud agent and code review; `/skills` in VS Code. |
 | Repeated prompts | Prompt files in `.github/prompts/*.prompt.md`, as a slash command. |
 | Subagents | Agent and Plan mode start subagents themselves; custom roles via `.github/agents/*.agent.md`. |
-| **Language and planning (steps 1–2)** | |
+| **Language and planning (ladder steps 1–2)** | |
 | Grilling (`grill-with-docs`) | The skill itself, or the Plan agent (`/plan`), which asks clarifying questions first. Glossary and ADRs live in the repo either way. |
 | Wayfinder map, spec, tickets | Issues with sub-issues on GitHub; one decision ticket per new chat session. |
-| **Review (steps 3–4)** | |
+| **Review (ladder steps 3–4)** | |
 | Second agent reviews (`code-review`) | Copilot code review on the PR (reads instructions and skills); `/review` in Copilot CLI; or a custom reviewer agent in a fresh session. Copilot code review comments; to get Matt's "fix, don't just comment", let the cloud agent act on the comments (mention `@copilot` on the PR) or run the reviewer skill locally. |
 | Hide the standards from the implementer | Put coding standards in `.github/instructions/<name>.instructions.md` with `excludeAgent: "coding-agent"`: Copilot code review reads them, the cloud agent doesn't. This applies to the GitHub agents; VS Code's local agent may still load the file, so check before relying on it there. |
 | PR body (`pr`) | `.github/pull_request_template.md` with Summary · Evidence (before/after) · Merge danger (door, blast radius), plus the `pr` skill. |
 | `retro` | The `retro` skill in agent mode or the CLI, on the sessions and PR comments behind one PR. Output lands in checks, review-only instructions or AGENTS.md. |
-| **Checks and eyes (steps 5–6)** | |
+| **Checks and eyes (ladder steps 5–6)** | |
 | Pre-commit hook, boundary rules | Tool-agnostic (Husky + lint-staged, pre-commit, dependency-cruiser). Required status checks on the branch make CI the hard stop. |
 | Agent's eyes (logs, DB, browser) | MCP servers in VS Code and for the cloud agent; tools and dependencies for the cloud agent in `.github/workflows/copilot-setup-steps.yml`. |
-| **Factory (steps 7–8)** | |
+| **Factory (ladder steps 7–8)** | |
 | Agent works alone in a sandbox | Assign an issue to the Copilot cloud agent: it works in its own ephemeral GitHub Actions environment and opens a PR. From level 4, after steps 3, 4 and 6 hold. |
 | Label-triggered steps | GitHub Actions on `issues: labeled`, filtered on one label per job. How the workflow hands the issue to Copilot depends on plan and API support: check the docs. |
 | Scheduled loops (orchestrator slot) | GitHub Actions `schedule` and event triggers; concurrency groups and timeouts as brakes. |

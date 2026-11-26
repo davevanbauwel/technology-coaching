@@ -11,7 +11,7 @@ Matt Pocock's *Software Factories for Real Engineers* (7 chapters), preceded by 
 - **Phase boundary**: after planning, building or testing, decide: continue, clear, hand off, subagent, or compact. Mid-task: hand off (`handoff`), don't compact; compacting loses answers.
 - **AGENTS.md**: the file the agent reads at the start of every session. Short; points onward (progressive disclosure).
 
-## 1 · Domain language · step 1
+## 1 · Domain language · ladder step 1
 
 - **Why**: agents invent their own names. One concept gets different names in UI, emails and code, and agents rebuild code that already exists.
 - **What**: one shared vocabulary in a small `GLOSSARY.md`, plus a few ADRs in `docs/adr/`. `grill-with-docs` builds both: the agent interviews you and writes terms down as you decide (`domain-modeling` sharpens terms; `grilling` is the interview primitive).
@@ -23,7 +23,7 @@ Matt Pocock's *Software Factories for Real Engineers* (7 chapters), preceded by 
   - Short and grown slowly: add only what current work needs; rushed entries need pruning later.
   - Let the code break ties: torn between two words, count them in the code and pick the one that keeps the rename small.
 
-## 2 · Wayfinder · step 2
+## 2 · Wayfinder · ladder step 2
 
 - **Why**: a big plan doesn't fit in one session; the agent gets worse as the context fills, and compacting loses answers.
 - **What**: `wayfinder` keeps the plan in the issue tracker: one map issue with small decision tickets under it. Each ticket gets a fresh session and the right depth.
@@ -39,7 +39,7 @@ Matt Pocock's *Software Factories for Real Engineers* (7 chapters), preceded by 
   - Decide at the right fidelity: some questions (a vendor choice) only a prototype answers; when a prototype raises a UX question, go back to talking.
   - Prototyping is where to spend tokens: several variants, your own likes and dislikes. Keep that code off main.
 
-## 3 · Review · steps 3–4
+## 3 · Review · ladder steps 3–4
 
 - **Why**: agents write more code than people can review; without a system, reviewers repeat the same comments on poor code.
 - **What**: three brakes, cheapest first:
@@ -60,7 +60,7 @@ Matt Pocock's *Software Factories for Real Engineers* (7 chapters), preceded by 
   - Not every PR needs a human (he knows it's controversial): reversible, small blast radius, solid checks and agent review. Finance or medical code is different.
   - Agents write poor PR descriptions; visual summaries changed his mind. He insists on "before" evidence.
 
-## 4 · Codebase design · step 5
+## 4 · Codebase design · ladder step 5
 
 - **Why**: agents finish the task but don't improve the design. Code fills up with copied logic and tests that only repeat the code.
 - **What**: a fixed design vocabulary (`codebase-design`), a scan (`improve-codebase-architecture`), and boundary rules a tool enforces (e.g. dependency-cruiser; `setup-ts-deep-modules` in the course).
@@ -73,7 +73,7 @@ Matt Pocock's *Software Factories for Real Engineers* (7 chapters), preceded by 
   - One vocabulary, no dogma: if the team already has design terms it likes, use those.
   - A check, backed by review: agents can cheat a check by editing its config, so add a coding standard too. Keep the rule narrow to avoid a huge refactor.
 
-## 5 · Feedback loops · step 6
+## 5 · Feedback loops · ladder step 6
 
 - **Why**: an agent that sees only files and tests is blind; written rules are followed only sometimes.
 - **What**: automated checks that fail *with the fix in the message*, plus data sources the agent can look at.
@@ -99,7 +99,7 @@ Matt Pocock's *Software Factories for Real Engineers* (7 chapters), preceded by 
   - Tests stay out of the hook, even at 2 seconds, because the suite will grow.
   - A hook is not a gate: agents can skip it, so CI is the hard stop. He finds pre-push hooks annoying and doesn't use them.
 
-## 6 · Software factory, part 1 · step 7
+## 6 · Software factory, part 1 · ladder step 7
 
 - **Why**: even with brakes in place, a person still starts and steers every step, which caps output at what one person can watch.
 - **What**: each step runs as an agent in its own sandbox, started by an issue label. Add agents as trust in the brakes grows.
@@ -113,7 +113,7 @@ Matt Pocock's *Software Factories for Real Engineers* (7 chapters), preceded by 
   - A soft reviewer slows you down: it should fix more and ask less.
   - Push back on retro too: reject bad suggestions (a check before every edit) and reword lines it adds to AGENTS.md.
 
-## 7 · Software factory, part 2 · step 8
+## 7 · Software factory, part 2 · ladder step 8
 
 - **Why**: part 1 runs only on GitHub and only from labels; many useful jobs run on a schedule or an event.
 - **What**: five slots and one vocabulary (a **task** is a kind of work, a **run** one execution, a **runner** the throw-away machine). Draw each loop on a whiteboard first.

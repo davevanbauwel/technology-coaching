@@ -27,7 +27,7 @@ Every answer ties back to at least one of these. They are also the shortest way 
 
 ## The path
 
-Diagnosis first, route second. The course builds in three layers: **shared language → foundations → factory**. Levels 0 and 1 come before the course (the Crash Course fundamentals) and are where many client teams start.
+Diagnosis first, approach second. The course builds in three layers: **shared language → foundations → factory**. Levels 0 and 1 come before the course (the Crash Course fundamentals) and are where many client teams start.
 
 Pick 3 or 4 diagnostic questions:
 - How did you use AI on your last task, concretely?
@@ -50,7 +50,7 @@ Pick 3 or 4 diagnostic questions:
 
 ### The ladder
 
-The eight steps the course builds, in order. Details per step in `course.md`; team situations per step in `routes.md`.
+The eight steps the course builds, in order. Details per step in `course.md`; team situations per ladder step in `approaches.md`.
 
 | # | Layer | Step | Matt's skills | Done when |
 |---|---|---|---|---|
@@ -81,10 +81,10 @@ Read `prepare.md` and follow its steps: case → diagnosis → three options on 
 
 ## Mode: Question
 
-1. **Read `routes.md`** and pick the matching route (max. 2), the team's level and ladder step.
+1. **Read `approaches.md`** and pick the matching approach (max. 2), the team's level and ladder step.
 2. **Answer** in four parts: **Situation · Matt's idea · Concrete · Script line**. *Matt's idea* names one of the three lines; add Matt's own take from `course.md` when it is surprising or goes against common advice. Tailor *Concrete* to what you know about the team.
 3. **Copilot**: when the mechanics differ (fresh sessions, where files live, review agents, AFK work), read `copilot.md`. The concepts are the same.
-4. **No matching route?** Reason from `course.md`, label it "This is a new route" and deliver it in route format for the next retro.
+4. **No matching approach?** Reason from `course.md`, label it "This is a new approach" and deliver it in approach format for the next retro.
 5. **Outside Matt's lens** (pure agile/Scrum: estimation, velocity, team dynamics): say so in one sentence and leave it there.
 
 **Done when:** all four parts are there, with level and ladder step, and *Concrete* is something the team can do this week.
@@ -95,13 +95,13 @@ For a recurring workflow or a factory loop (ladder steps 7–8):
 
 1. **Design the loop on one page** first: Trigger · Task · Brake · Output · Human. No brake, no loop.
 2. **Determinism first**: can a script do it? Then a script, and the agent only handles what the script can't (Matt's rebase: script first, agent on conflicts).
-3. **Check the brakes** the loop depends on (steps 3, 4, 6). Missing? That becomes the first step, not the loop. Below level 4, start with a review-only or ratchet loop and never auto-merge.
+3. **Check the brakes** the loop depends on (ladder steps 3, 4, 6). Missing? That becomes the first step, not the loop. Below level 4, start with a review-only or ratchet loop and never auto-merge.
 4. Run `vector` for the agent part (map Verification and Trust before any AFK trigger).
 5. End with a script line for explaining the loop to the team.
 
 ## Mode: Retro
 
-Goal: Dave learns from every meeting, and this skill grows with him. Matt's second line applies to the skill too: an uncertainty that comes back twice becomes a route, a fallback line or a level signal.
+Goal: Dave learns from every meeting, and this skill grows with him. Matt's second line applies to the skill too: an uncertainty that comes back twice becomes an approach, a fallback line or a level signal.
 
 1. **Ask** in one round, skipping what Dave already told you: What went well? Where did you feel unsure, or which question couldn't you answer? What was agreed? Was the level right? And for the **Evidence** block: which target behaviour did you see in their work since last time, with a link (PR, ticket, file)? One thing someone said? What blocked them that is outside their control (policy, tooling approval, data, architecture)?
 2. **What worked**: name the principle behind each point.
@@ -109,8 +109,8 @@ Goal: Dave learns from every meeting, and this skill grows with him. Matt's seco
 4. **Distil 1 to 3 lessons.**
 5. **Propose a skill change** in the file where it belongs:
    - `SKILL.md`: a Field experience line (`- [month year] · [situation] · worked: [...] · next time: [...]`) or a level signal.
-   - `routes.md`, `prepare.md`, `copilot.md`, `course.md`: a route, a fallback line, a stack question, a Copilot tip, a course correction.
-   - Anywhere: a **deletion** of what turned out stale or redundant. An experience absorbed into a route or level leaves Field experience.
+   - `approaches.md`, `prepare.md`, `copilot.md`, `course.md`: an approach, a fallback line, a stack question, a Copilot tip, a course correction.
+   - Anywhere: a **deletion** of what turned out stale or redundant. An experience absorbed into an approach or level leaves Field experience.
 
    Deliver every change as an exact text block with file name and location. Never edit the installed skill directly (no `propose_skills`): the source is the GitHub repo `davevanbauwel/technology-coaching`; changes go there first, then get rebuilt and re-uploaded.
 

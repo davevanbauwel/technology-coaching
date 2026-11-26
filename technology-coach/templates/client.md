@@ -2,9 +2,9 @@
 
 *Last updated: YYYY-MM-DD*
 
-**Language:** [language Dave writes this client's files in] · script lines in [the teams' language]
+**Language:** script lines and slides in [the teams' language]; files in English
 
-Facts that hold for every case at this client. Headings stay in English; the text is in the language above.
+Facts that hold for every case at this client.
 
 ## Context
 What the organisation does, how coaching is set up (who asked for it, who Dave reports to, how findings are reported).

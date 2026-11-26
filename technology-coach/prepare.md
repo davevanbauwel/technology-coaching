@@ -11,24 +11,24 @@ Dave usually starts from a **case**: a team with its architecture, stack, proces
    - *case*: the goal, what they ask of Dave, the target behaviours agreed so far; anything still "not clear yet" becomes a question in the plan
    - *format*: presentation, lunch & learn, call or workshop; duration, audience size, first meeting or follow-up. Without a format: propose the one that fits the level.
 2. **Diagnose** the level and the next ladder step (`SKILL.md`, The path): name the signals and assumptions. Every option in step 3 starts from here.
-3. **Recommend three options, then stop.** Three different next steps for a team on *this* level, each built on a different route from `routes.md`. Not three versions of one plan, not options from another level. Per option:
+3. **Recommend three options, then stop.** Three different next steps for a team on *this* level, each built on a different approach from `approaches.md`. Not three versions of one plan, not options from another level. Per option:
    ```
-   **[A/B/C]. [title]** · route: [...] · step [k]
+   **[A/B/C]. [title]** · approach: [...] · ladder step [k]
    - Why now: [signal from the case]
    - Trade-off: [what it costs or risks]
    ```
-   Mark one as recommended, with one line why. Close with: "Which one, or do you have another direction?" Then wait. Write and save nothing before Dave chooses. Skip this step when Dave already names the topic or route.
-4. **Lay out the path**: 2 to 4 ladder steps from where the team is, each with its route. Step 1 is the option Dave chose. Never put steps 7–8 before 3, 4 and 6 hold. The path is what the team walks after the meeting; the meeting puts them on its first step.
+   Mark one as recommended, with one line why. Close with: "Which one, or do you have another direction?" Then wait. Write and save nothing before Dave chooses. Skip this step when Dave already names the topic or approach; a route step with agreed content (e.g. S1: the basics) counts as a named topic.
+4. **Lay out the ladder steps**: 2 to 4 ladder steps from where the team is, each with its approach. The first is the option Dave chose. Never put ladder steps 7–8 before 3, 4 and 6 hold. They are what the team walks after the meeting; the meeting puts them on the first one.
 5. **Fill in the game plan** below, block by block, with the source between ⟨⟩. Build the Plan block from the matching format skeleton. Copilot tips from `copilot.md`.
 
 ```
 ## Game plan: [team/case], [date], [format]
 **Level:** [range in words, e.g. 1 – loose prompts, some at 2] · signals: [...] · assumptions: [...]
 **Matt's line for this team:** [one of the three lines, in a sentence for them]
-**Path:**  ⟨ladder + routes.md⟩
-1. [step k: ...] · route: [...]  ← goal of this meeting
-2. [step k: ...] · route: [...]
-**Goal of this meeting:** [one sentence: path step 1, fitting the format]
+**Ladder steps:**  ⟨ladder + approaches.md⟩
+1. [ladder step k: ...] · approach: [...]  ← goal of this meeting
+2. [ladder step k: ...] · approach: [...]
+**Goal of this meeting:** [one sentence: the first ladder step, fitting the format]
 
 ### Plan  ⟨format skeleton, filled in for this case⟩
 1. [part] – [what Dave does] · Script line: "[...]"
@@ -40,7 +40,7 @@ Dave usually starts from a **case**: a team with its architecture, stack, proces
 ### Watch for your retro  ⟨2 things to observe, at least one a target behaviour to look for in their work (the retro's Seen line)⟩
 ```
 
-**Done when:** the plan builds on the option Dave chose, every block is filled in, every path step names its ladder step and route, every Plan part has a script line specific to *this* case, and Dave reads the whole thing in two minutes.
+**Done when:** the plan builds on the option Dave chose, every block is filled in, every ladder step names its approach, every Plan part has a script line specific to *this* case, and Dave reads the whole thing in two minutes.
 
 ## Format skeletons
 
@@ -50,11 +50,11 @@ One idea and one demo; the rest of the path goes to a follow-up.
 
 1. **Hook.** Their pain in their words: the signals of their level.
    Script line: "Who recognises this: [signal]?"
-2. **Matt's idea.** The one of the three lines behind path step 1, with one picture (the ladder, the three brakes, the door/blast-radius tree).
-3. **Demo on their stack.** Path step 1 on code like theirs, in the Copilot features they have.
-4. **One thing to try this week.** Path step 1, small enough to start Monday.
+2. **Matt's idea.** The one of the three lines behind the first ladder step, with one picture (the ladder, the three brakes, the door/blast-radius tree).
+3. **Demo on their stack.** The first ladder step on code like theirs, in the Copilot features they have.
+4. **One thing to try this week.** The first ladder step, small enough to start Monday.
    Script line: "If you try one thing this week, make it this."
-5. **Q&A and next step.** Fallback lines ready; invite them to a call or workshop for path step 2.
+5. **Q&A and next step.** Fallback lines ready; invite them to a call or workshop for the second ladder step.
 
 ### Call or workshop: "How do we tackle this?" (levels 1–3)
 
