@@ -8,7 +8,7 @@ Dave usually starts from a **case**: a team with its architecture, stack, proces
    - *team*: who, roles, AI experience per person
    - *architecture and stack*: language, architecture, tests, CI
    - *processes*: how work flows from idea to production (refinement, review, release)
-   - *case*: the goal, what they ask of Dave
+   - *case*: the goal, what they ask of Dave, the target behaviours agreed so far; anything still "not clear yet" becomes a question in the plan
    - *format*: presentation, lunch & learn, call or workshop; duration, audience size, first meeting or follow-up. Without a format: propose the one that fits the level.
 2. **Diagnose** the level and the next ladder step (`SKILL.md`, The path): name the signals and assumptions. Every option in step 3 starts from here.
 3. **Recommend three options, then stop.** Three different next steps for a team on *this* level, each built on a different route from `routes.md`. Not three versions of one plan, not options from another level. Per option:
@@ -23,7 +23,7 @@ Dave usually starts from a **case**: a team with its architecture, stack, proces
 
 ```
 ## Game plan: [team/case], [date], [format]
-**Level:** [n – name] · signals: [...] · assumptions: [...]
+**Level:** [range in words, e.g. 1 – loose prompts, some at 2] · signals: [...] · assumptions: [...]
 **Matt's line for this team:** [one of the three lines, in a sentence for them]
 **Path:**  ⟨ladder + routes.md⟩
 1. [step k: ...] · route: [...]  ← goal of this meeting
@@ -33,11 +33,11 @@ Dave usually starts from a **case**: a team with its architecture, stack, proces
 ### Plan  ⟨format skeleton, filled in for this case⟩
 1. [part] – [what Dave does] · Script line: "[...]"
 ...
-### Stack questions  ⟨3–5 from the Stack checklist, highest yield for this case; for a presentation: settle them with the contact person beforehand⟩
+### Questions to ask  ⟨3–5: what the case still marks "not clear yet" first, then the Stack checklist, highest yield for this case; for a presentation: settle them with the contact person beforehand⟩
 ### Copilot tips  ⟨2–3 from copilot.md, only what matters now⟩
 ### If you're stuck  ⟨2 fallback lines⟩
 ### Pitfalls  ⟨max. 3: [pitfall] → [what Dave does then]⟩
-### Watch for your retro  ⟨2 things to observe during the meeting⟩
+### Watch for your retro  ⟨2 things to observe, at least one a target behaviour to look for in their work (the retro's Seen line)⟩
 ```
 
 **Done when:** the plan builds on the option Dave chose, every block is filled in, every path step names its ladder step and route, every Plan part has a script line specific to *this* case, and Dave reads the whole thing in two minutes.

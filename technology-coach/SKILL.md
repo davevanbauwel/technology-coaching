@@ -1,6 +1,6 @@
 ---
 name: "technology-coach"
-description: "Technology coaching for software teams adopting AI-assisted delivery, along Matt Pocock's software-factory path (shared language, then foundations, then the factory). Use to prepare a presentation, lunch & learn, call or workshop for a team or an individual (often from a team case), debrief one (retro), answer what Matt would do in a team situation, or design a team's agent loop or recurring workflow (via vector)."
+description: "Technology coaching for software teams adopting AI-assisted delivery, along Matt Pocock's software-factory path (shared language, then foundations, then the factory). Use to prepare a presentation, lunch & learn, call or workshop for a team or an individual (often from a team case), debrief one (retro), report a client's progress from the case files, answer what Matt would do in a team situation, or design a team's agent loop or recurring workflow (via vector)."
 ---
 
 # Technology coach
@@ -46,6 +46,8 @@ Pick 3 or 4 diagnostic questions:
 
 **Mixed team:** the group part aims at the lowest level; handle differences in pairing.
 
+**Level is a pitch tool**: it aims a session, and a range ("0–1") is normal. Progress is something else: **target behaviours** (2–4 observable practices agreed with the team or person) showing up in their work, seen at least once with an artefact. Claim contribution, never causation.
+
 ### The ladder
 
 The eight steps the course builds, in order. Details per step in `course.md`; team situations per step in `routes.md`.
@@ -69,8 +71,9 @@ Order: the course order is the default. A team with a review bottleneck may ente
 - **Retro**: a past meeting ("how did it go", "debrief").
 - **Question**: a single team situation ("what would Matt do", "team has problem Y").
 - **Automate**: a team's recurring workflow or factory loop to hand to an agent.
+- **Report**: an overview of a client's cases, generated from the home repo (`home-repo.md`, Report). Also the Success Case round.
 
-When unsure: ask which of the four.
+When unsure: ask which of the five.
 
 ## Mode: Prepare
 
@@ -100,7 +103,7 @@ For a recurring workflow or a factory loop (ladder steps 7–8):
 
 Goal: Dave learns from every meeting, and this skill grows with him. Matt's second line applies to the skill too: an uncertainty that comes back twice becomes a route, a fallback line or a level signal.
 
-1. **Ask** in one round, skipping what Dave already told you: What went well? Where did you feel unsure, or which question couldn't you answer? What was agreed? Was the level right?
+1. **Ask** in one round, skipping what Dave already told you: What went well? Where did you feel unsure, or which question couldn't you answer? What was agreed? Was the level right? And for the **Evidence** block: which target behaviour did you see in their work since last time, with a link (PR, ticket, file)? One thing someone said? What blocked them that is outside their control (policy, tooling approval, data, architecture)?
 2. **What worked**: name the principle behind each point.
 3. **Every uncertainty**: the approach for next time plus a script line. For doubts about a specific stack or tool, say so and show how Dave finds out.
 4. **Distil 1 to 3 lessons.**
@@ -112,22 +115,37 @@ Goal: Dave learns from every meeting, and this skill grows with him. Matt's seco
    Deliver every change as an exact text block with file name and location. Never edit the installed skill directly (no `propose_skills`): the source is the GitHub repo `davevanbauwel/technology-coaching`; changes go there first, then get rebuilt and re-uploaded.
 
    **Anonymise** what enters the skill: "team A at client X", the situation, no names of people, no confidential client details.
-6. **Save** the retro notes and the proposal (see Saving the work). Raw notes are not anonymised; only what enters the skill is.
+6. **Evidence block**, always, after the lessons:
+   ```
+   ### Evidence
+   - **Seen:** [target behaviour] · [date] · [artefact: link or ID, e.g. PR !123] · or "none seen"
+   - **Said:** "[quote]" ([who]) · or a confidence/relevance signal
+   - **Blockers:** [blocker outside the team's control] · with [whom] · open | resolved · or "none"
+   ```
+   Weigh it: *seen* (in the work, with an artefact) > *said* > *activity*. For a meeting or community, Evidence is mostly Said.
+7. **Save** the retro notes, the Evidence block and the proposal (see Saving the work). Raw notes are not anonymised; only what enters the skill is.
 
-**Done when:** every uncertainty has an approach and a script line, there are 1 to 3 lessons, and there is one concrete, anonymised skill proposal (or an explicit "nothing to change", with the reason).
+**Done when:** the Evidence block has all three lines, every uncertainty has an approach and a script line, there are 1 to 3 lessons, and there is one concrete, anonymised skill proposal (or an explicit "nothing to change", with the reason).
 
 ## Saving the work
 
-**In a coaching home repo** (the working directory or a parent has `clients/`): its `AGENTS.md` says what to read before preparing and where to save. Follow it.
+**In a home repo** (a folder at or above the working directory holds `clients/`): read `home-repo.md` before you start, and follow its workflow for the mode. It reads the case files, saves the session and files what was learned.
 
-**Anywhere else** (e.g. a client laptop): save nothing. End with one markdown block Dave can paste into the home repo:
+**Anywhere else** (e.g. a client laptop): save nothing there. End with one **paste block** Dave carries to his home repo:
 
-1. This header line:
-   ```
-   Client: [client] · Unit: [unit or –] · Case type: [team | individual | meeting] · Case: [folder-name] · Team: [team or –] · Session: YYYY-MM-DD-[format]
-   ```
-2. The game plan (or retro), verbatim.
-3. **Assumptions to confirm**: every client fact you assumed (budget, contacts, tooling, language), since there is no client file here.
+```
+Paste block · <client> · <case type> · <case folder name> · <YYYY-MM-DD> · <format> · prepare|retro
+
+<the game plan, or the retro with its Evidence block>
+
+### Case facts learned
+- new | changed · [fact for the case: people, stack, agreements, Starting picture item, target behaviour]
+
+### Assumptions to confirm
+- [assumption made without the home repo's files]
+```
+
+Case type is team, individual, meeting or community; the case folder name is lowercase with dashes (`team-a`, `jane-doe`, `2026-12-12-lunch-and-learn`).
 
 ## Sources
 
